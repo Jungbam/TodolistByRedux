@@ -8,10 +8,27 @@ export const doneList = (payload) => ({ type: DONE_TODO, payload });
 export const deleteList = (payload) => ({ type: DELETE_TODO, payload });
 export const detailList = (payload) => ({ type: DETAIL_TODO, payload });
 
+const getLocal = () => {
+  return JSON.parse(localStorage.getItem("todolist"));
+};
+const setLocal = (todo) => {
+  localStorage.setItem("todolist", JSON.stringify(todo));
+  localStorage.setItem(
+    "done",
+    JSON.stringify(todo?.filter((el) => el.isDone === true))
+  );
+  localStorage.setItem(
+    "notDone",
+    JSON.stringify(todo?.filter((el) => el.isDone === false))
+  );
+};
+
 const initial = {
-  todo: [],
-  done: [],
-  notDone: [],
+  todo: getLocal() ?? [],
+  done: getLocal() ? getLocal()?.filter((el) => el.isDone === true) ?? [] : [],
+  notDone: getLocal()
+    ? getLocal()?.filter((el) => el.isDone === false) ?? []
+    : [],
   select: {},
 };
 
@@ -25,6 +42,7 @@ export const todoReducer = (state = initial, action) => {
   switch (action.type) {
     case ADD_TODO:
       const todo = { ...action.payload };
+      setLocal([...state.todo, todo]);
       return {
         ...state,
         todo: [...state.todo, todo],
@@ -36,6 +54,7 @@ export const todoReducer = (state = initial, action) => {
       const doneDo = state.todo.map((el) =>
         el.id === doneId ? { ...el, isDone: !el.isDone } : el
       );
+      setLocal(doneDo);
       return {
         ...state,
         todo: doneDo,
@@ -45,6 +64,7 @@ export const todoReducer = (state = initial, action) => {
     case DELETE_TODO:
       const deleteId = action.payload;
       const deleteDo = state.todo.filter((el) => el.id !== deleteId);
+      setLocal(deleteDo);
       return {
         ...state,
         todo: deleteDo,

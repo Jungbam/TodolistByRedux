@@ -1,21 +1,24 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { Title, Wrapper } from "./styleModule/styleIndex";
 
 const Header = () => {
   return (
-    <header className="headerDiv">
-      <Link to="/">
-        <h1>Second Todo</h1>
-      </Link>
-      <nav className="navDiv">
-        <Link to="/todo">
+    <Wrapper bgColor={"#999"} justify="space-between" padding={"5px"}>
+      <NavLink to="/" style={{ textDecoration: "none" }}>
+        <Title color={"white"} fw={6000}>
+          Second Todo
+        </Title>
+      </NavLink>
+      <Wrapper width="300px" justify={"space-around"} margin={"0 15px"}>
+        <NavLink to="/todo" style={{ textDecoration: "none" }}>
           <li>TodoList</li>
-        </Link>
-        <Link to="/about">
+        </NavLink>
+        <NavLink to="/about" style={{ textDecoration: "none" }}>
           <li>About</li>
-        </Link>
-      </nav>
-    </header>
+        </NavLink>
+      </Wrapper>
+    </Wrapper>
   );
 };
 
