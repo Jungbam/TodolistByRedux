@@ -16,6 +16,7 @@ const Input = ({
   value,
   change,
   margin,
+  holder,
 }) => {
   const styles = {
     width,
@@ -32,7 +33,7 @@ const Input = ({
     margin,
   };
   return (
-    <StInput {...styles} onChange={change}>
+    <StInput {...styles} placeholder={holder} onChange={change}>
       {children}
     </StInput>
   );
@@ -52,6 +53,7 @@ Input.defaultProps = {
   value: "",
   change: (e) => {},
   margin: "0",
+  holder: "",
 };
 const StInput = styled.input`
   width: ${({ width }) => width};
@@ -66,7 +68,6 @@ const StInput = styled.input`
   name: ${({ name }) => name};
   value :${({ value }) => value};
   margin: ${({ margin }) => margin};
-
   &:focus {
    outline: none;
    box-shadow: 0px 0px 6px rgba(100, 58, 199);
