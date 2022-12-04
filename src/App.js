@@ -1,8 +1,8 @@
 import { Provider } from "react-redux";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import Footer from "./component/Footer";
 import Header from "./component/Header";
+import { FooterCon } from "./component/styleModule/styleIndex";
 import About from "./pages/About/About";
 import Error404 from "./pages/Error404/Error404";
 import Main from "./pages/Main/Main";
@@ -22,7 +22,7 @@ function App() {
           <Route path="/about/:page" element={<TodoDetail />}></Route>
           <Route path="/*" element={<Error404 />}></Route>
         </Routes>
-        <Footer />
+        <FooterCon bgColor="#999" />
       </BrowserRouter>
     </Provider>
   );
