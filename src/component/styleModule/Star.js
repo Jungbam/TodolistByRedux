@@ -1,3 +1,5 @@
+// 작업중
+
 import React from "react";
 import styled from "styled-components";
 
@@ -44,7 +46,7 @@ Star.defaultProps = {
   align: "center",
   justify: "center",
   direction: "row",
-  bgColor: "white",
+  bgColor: "none",
   color: "black",
   border: "none",
   radius: "0px",
@@ -72,6 +74,6 @@ const StStar = styled.div`
           inset -40px -30px 100px 0 cyan,
           inset -40px -30px 140px 0 powderblue;
   margin: ${({ margin }) => margin};
-`;
+  `;
 
 export default Star;

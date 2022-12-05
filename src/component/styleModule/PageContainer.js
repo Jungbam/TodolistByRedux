@@ -13,6 +13,7 @@ const PageContainer = ({
   padding,
   border,
   height,
+  position,
 }) => {
   const styles = {
     padding,
@@ -25,6 +26,7 @@ const PageContainer = ({
     display,
     border,
     height,
+    position,
   };
   return <StPageContainer {...styles}>{children}</StPageContainer>;
 };
@@ -41,11 +43,12 @@ PageContainer.defaultProps = {
   direction: "row",
   margin: "0 auto",
   padding: 0,
+  position: "",
 };
 const StPageContainer = styled.div`
   width: ${({ width }) => width};
   height: ${({ height }) => height};
-  min-height : 100vh;
+  min-height: 100vh;
   background-color: ${({ bgColor }) => bgColor};
   display: ${({ display }) => display};
   align-items: ${({ align }) => align};
@@ -53,5 +56,6 @@ const StPageContainer = styled.div`
   flex-direction: ${({ direction }) => direction};
   margin: ${({ margin }) => margin};
   padding: ${({ padding }) => padding};
-  border: ${({ border }) => border}};
+  border: ${({ border }) => border};
+  position: ${({ position }) => position};
 `;

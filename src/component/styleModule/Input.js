@@ -41,7 +41,7 @@ const Input = ({
 
 Input.defaultProps = {
   width: "200px",
-  bgColor: "white",
+  bgColor: "none",
   color: "black",
   border: "none",
   radius: "0px",

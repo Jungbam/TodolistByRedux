@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const Wrapper = ({
-  width = "100%",
+  width,
   children,
   align,
   justify,
@@ -15,6 +15,7 @@ const Wrapper = ({
   height,
   wrap,
   shadow,
+  position,
 }) => {
   const styles = {
     padding,
@@ -29,6 +30,7 @@ const Wrapper = ({
     height,
     wrap,
     shadow,
+    position,
   };
   return <StWrapper {...styles}>{children}</StWrapper>;
 };
@@ -47,6 +49,7 @@ Wrapper.defaultProps = {
   height: "100%",
   wrap: "wrap",
   shadow: "none",
+  position: "",
 };
 const StWrapper = styled.div`
   width: ${({ width }) => width};
@@ -60,6 +63,7 @@ const StWrapper = styled.div`
   padding: ${({ padding }) => padding};
   border: ${({ border }) => border}};
   box-shadow: ${({ shadow }) => shadow}};
+  position: ${({ position }) => position};
   flex-wrap :wrap;
   overflow:auto;
 `;

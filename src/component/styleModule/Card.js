@@ -17,6 +17,7 @@ const Card = ({
   margin,
   shadow,
   height,
+  position,
 }) => {
   const styles = {
     width,
@@ -33,6 +34,7 @@ const Card = ({
     margin,
     padding,
     height,
+    position,
   };
   return <StCard {...styles}>{children}</StCard>;
 };
@@ -44,13 +46,14 @@ Card.defaultProps = {
   align: "center",
   justify: "center",
   direction: "row",
-  bgColor: "white",
+  bgColor: "none",
   color: "black",
   border: "none",
   radius: "0px",
   shadow: "none",
   opacity: 1,
   margin: "0 auto",
+  position: "",
 };
 const StCard = styled.div`
   width: ${({ width }) => width};
@@ -67,6 +70,7 @@ const StCard = styled.div`
   border-radius: ${({ radius }) => radius};
   box-shadow: ${({ shadow }) => shadow};
   margin: ${({ margin }) => margin};
+  position: ${({ position }) => position};
 `;
 
 export default Card;

@@ -39,7 +39,7 @@ Form.defaultProps = {
   align: "center",
   justify: "center",
   direction: "row",
-  bgColor: "white",
+  bgColor: "none",
   color: "black",
   border: "none",
   radius: "0px",

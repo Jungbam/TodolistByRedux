@@ -36,7 +36,7 @@ const Button = ({
 };
 
 Button.defaultProps = {
-  bgColor: "white",
+  bgColor: "none",
   color: "black",
   radius: "0px",
   opacity: 1,
