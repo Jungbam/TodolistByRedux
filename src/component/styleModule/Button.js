@@ -11,6 +11,7 @@ const Button = ({
   width,
   height,
   hover,
+  shadow,
   border,
   margin,
 }) => {
@@ -18,6 +19,7 @@ const Button = ({
     hover,
     bgColor,
     color,
+    shadow,
     radius,
     opacity,
     width,
@@ -39,7 +41,7 @@ Button.defaultProps = {
   radius: "0px",
   opacity: 1,
   onclick: () => {},
-
+  shadow: "none",
   border: "1px solid black",
   margin: "0 auto",
 };
@@ -50,14 +52,15 @@ const StBtn = styled.button`
   opacity: ${({ opacity }) => opacity};
   width: ${({ width }) => width};
   height: ${({ height }) => height};
+  box-shadow: ${({ shadow }) => shadow};
+  border: ${({ border }) => border};
+  margin: ${({ margin }) => margin};
+  cursor: pointer;
+  padding: 3px;
   &:hover {
     outline: none;
     opacity: 0.8;
-  };
-  cursor: pointer;
-  border: ${({ border }) => border}};
-  margin: ${({ margin }) => margin};
-  padding : 3px
+  }
 `;
 
 export default Button;
