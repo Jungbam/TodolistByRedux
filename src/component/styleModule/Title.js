@@ -48,12 +48,12 @@ const StTitle = styled.h1`
   font-size: ${({ fs }) => fs};
   background-color: ${({ bgColor }) => bgColor};
   color: ${({ color }) => color};
-  border: ${({ border }) => border}};
+  border: ${({ border }) => border};
   opacity: ${({ opacity }) => opacity};
   border-radius: ${({ radius }) => radius};
   box-shadow: ${({ shadow }) => shadow};
   text-align: ${({ ta }) => ta};
-  text-decoration: ${({ td }) => td}; 
+  text-decoration: ${({ td }) => td};
   margin: ${({ margin }) => margin};
   font-weight: ${({ fw }) => fw};
   &:focus {
@@ -61,7 +61,7 @@ const StTitle = styled.h1`
     box-shadow: 0px 0px 6px rgba(100, 58, 199);
   }
   &:active {
-    text-decoration: none; 
+    text-decoration: none;
   }
 `;
 

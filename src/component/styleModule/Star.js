@@ -63,17 +63,14 @@ const StStar = styled.div`
   flex-direction: ${({ direction }) => direction};
   background-color: ${({ bgColor }) => bgColor};
   color: ${({ color }) => color};
-  border: ${({ border }) => border}};
+  border: ${({ border }) => border};
   padding: ${({ padding }) => padding};
   opacity: ${({ opacity }) => opacity};
   border-radius: ${({ radius }) => radius};
-  box-shadow:0 0 20px  white,
-          4px 4px 10px 10px yellow,
-          inset 0 0 14px 0 white,
-          inset -40px -30px 70px 0 grey,
-          inset -40px -30px 100px 0 cyan,
-          inset -40px -30px 140px 0 powderblue;
+  box-shadow: 0 0 20px white, 4px 4px 10px 10px yellow, inset 0 0 14px 0 white,
+    inset -40px -30px 70px 0 grey, inset -40px -30px 100px 0 cyan,
+    inset -40px -30px 140px 0 powderblue;
   margin: ${({ margin }) => margin};
-  `;
+`;
 
 export default Star;

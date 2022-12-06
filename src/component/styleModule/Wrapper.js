@@ -61,11 +61,11 @@ const StWrapper = styled.div`
   flex-direction: ${({ direction }) => direction};
   margin: ${({ margin }) => margin};
   padding: ${({ padding }) => padding};
-  border: ${({ border }) => border}};
-  box-shadow: ${({ shadow }) => shadow}};
+  border: ${({ border }) => border};
+  box-shadow: ${({ shadow }) => shadow};
   position: ${({ position }) => position};
-  flex-wrap :wrap;
-  overflow:auto;
+  flex-wrap: wrap;
+  overflow: auto;
 `;
 // styled-normalize
 // GlobalStyled.js => 전역 스타일 부여
