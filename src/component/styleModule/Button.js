@@ -34,16 +34,16 @@ const Button = ({
     </StBtn>
   );
 };
-
+// props 정리, props의 타입모듈.
 Button.defaultProps = {
-  bgColor: "white",
+  bgColor: "none",
   color: "black",
   radius: "0px",
   opacity: 1,
   onclick: () => {},
   shadow: "none",
   border: "1px solid black",
-  margin: "0 auto",
+  margin: "0 auto", // 버튼에서?
 };
 const StBtn = styled.button`
   background-color: ${({ bgColor }) => bgColor};

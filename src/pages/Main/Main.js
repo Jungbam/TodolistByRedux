@@ -8,8 +8,11 @@ import {
 const Main = () => {
   return (
     <PageContainer bgColor="black">
-      <Star width="30vw" height="30vw" radius="50%">
-        <Title bgColor="none">항해 주특기 second Week 시작합니다.</Title>
+      <Star bgColor="white" width="400px" height="400px" radius="50%">
+        <Title bgColor="none">
+          항해 주특기 second Week
+          <br /> 시작합니다.
+        </Title>
       </Star>
     </PageContainer>
   );

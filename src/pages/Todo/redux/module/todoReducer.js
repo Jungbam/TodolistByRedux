@@ -11,6 +11,7 @@ export const detailList = (payload) => ({ type: DETAIL_TODO, payload });
 const getLocal = () => {
   return JSON.parse(localStorage.getItem("todolist"));
 };
+
 const setLocal = (todo) => {
   localStorage.setItem("todolist", JSON.stringify(todo));
   localStorage.setItem(

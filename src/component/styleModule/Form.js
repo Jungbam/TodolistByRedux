@@ -39,7 +39,7 @@ Form.defaultProps = {
   align: "center",
   justify: "center",
   direction: "row",
-  bgColor: "white",
+  bgColor: "none",
   color: "black",
   border: "none",
   radius: "0px",
@@ -55,12 +55,11 @@ const StForm = styled.form`
   flex-direction: ${({ direction }) => direction};
   background-color: ${({ bgColor }) => bgColor};
   color: ${({ color }) => color};
-  border: ${({ border }) => border}};
+  border: ${({ border }) => border};
   opacity: ${({ opacity }) => opacity};
   border-radius: ${({ radius }) => radius};
   box-shadow: ${({ shadow }) => shadow};
   text-align: ${({ ta }) => ta};
-  
 `;
 
 export default Form;

@@ -41,7 +41,7 @@ const Input = ({
 
 Input.defaultProps = {
   width: "200px",
-  bgColor: "white",
+  bgColor: "none",
   color: "black",
   border: "none",
   radius: "0px",
@@ -60,19 +60,18 @@ const StInput = styled.input`
   type: ${({ type }) => type};
   background-color: ${({ bgColor }) => bgColor};
   color: ${({ color }) => color};
-  border: ${({ border }) => border}};
+  border: ${({ border }) => border};
   opacity: ${({ opacity }) => opacity};
   border-radius: ${({ radius }) => radius};
   box-shadow: ${({ shadow }) => shadow};
   text-align: ${({ ta }) => ta};
   name: ${({ name }) => name};
-  value :${({ value }) => value};
+  value: ${({ value }) => value};
   margin: ${({ margin }) => margin};
   &:focus {
-   outline: none;
-   box-shadow: 0px 0px 6px rgba(100, 58, 199);
+    outline: none;
+    box-shadow: 0px 0px 6px rgba(100, 58, 199);
   }
-  
 `;
 
 export default Input;
