@@ -1,4 +1,7 @@
-import { createStore } from "redux";
-import { todoReducer } from "../module/todoReducer";
+import { todoReducertool } from "../module/todoReducertool";
 
-export const todoStore = createStore(todoReducer);
+const { configureStore } = require("@reduxjs/toolkit");
+
+export const todoStore = configureStore({
+  reducer: todoReducertool,
+});

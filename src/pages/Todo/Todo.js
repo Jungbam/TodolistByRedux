@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Article from "./element/Article";
-import { addList } from "./redux/module/todoReducer";
+import { addList } from "./redux/module/todoReducertool";
 import { v4 as uuidv4 } from "uuid";
 import {
   Button,
@@ -16,7 +16,7 @@ const Todo = () => {
     content: "",
   });
 
-  const { notDone, done } = useSelector((state) => state);
+  const { notDone, done } = useSelector((state) => state.reducer);
 
   const dispatch = useDispatch();
 

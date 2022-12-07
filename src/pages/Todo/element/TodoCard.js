@@ -2,7 +2,11 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { Button, Card } from "../../../component/styleModule/styleIndex";
-import { deleteList, detailList, doneList } from "../redux/module/todoReducer";
+import {
+  deleteList,
+  detailList,
+  doneList,
+} from "../redux/module/todoReducertool";
 const TodoCard = ({ el }) => {
   const dispatch = useDispatch();
 
